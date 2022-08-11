@@ -13,7 +13,7 @@ export const getChange = (amount, currency) => {
 	let amountLeft = amount
 	return currency.reduce((acc, coin) => {
 		const countCoins = Math.floor(amountLeft / coin)
-		if (countCoins => 1) {
+		if (countCoins >= 1) {
 			amountLeft = amountLeft - countCoins * coin
 			acc += countCoins
 		}
